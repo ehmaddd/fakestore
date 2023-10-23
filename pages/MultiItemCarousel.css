@@ -1,0 +1,36 @@
+.carousel-image {
+  width: 30%;
+  height: auto;
+}
+
+.alternate-content {
+  display: none;
+}
+
+.card.hoverable-card:hover .alternate-content {
+  display: block;
+}
+
+.card {
+  width: 250px;
+  height: 400px;
+  margin: 10px;
+  padding: 2rem;
+}
+
+.card-img-top {
+  max-width: 13rem;
+  height: 12rem;
+}
+
+.card-body>* {
+  line-height: 1.2rem;
+}
+
+.card .details {
+  display: none;
+}
+
+.card:hover .details {
+  display: block;
+}
