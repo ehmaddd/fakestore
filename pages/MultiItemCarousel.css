@@ -13,9 +13,9 @@
 
 .card {
   width: 250px;
-  height: 400px;
-  margin: 10px;
-  padding: 2rem;
+  height: 350px;
+  margin: 5px;
+  padding: 1rem;
 }
 
 .card-img-top {
@@ -33,4 +33,25 @@
 
 .card:hover .details {
   display: block;
+}
+
+.alternate-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  padding: 1.3rem;
+  width: 120%;
+  height: 120%;
+  top: -7rem;
+  left: 0;
+  opacity: 0;
+  border: 1px solid lightgray;
+}
+
+.card.hoverable-card:hover .alternate-content {
+  opacity: 1;
+  margin: 0.5rem;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import './MultiItemCarousel.css';
+import '../components/MenuBar';
+import MenuBar from '../components/MenuBar';
 
 function MultiItemCarousel({ data }) {
   const responsive = {
@@ -29,8 +31,8 @@ function MultiItemCarousel({ data }) {
       {data.map((element) => (
         <div key={element.id}>
           <div className="card hoverable-card">
-            <img src={element.image} className="card-img-top" alt={element.title} />
             <div className="card-body">
+              <img src={element.image} className="card-img-top" alt={element.title} />
               <h6 className="card-title">{element.title}</h6>
               <p>Rating: {element.rating.rate}</p>
               <p>Price: ${element.price}</p>
@@ -64,6 +66,7 @@ function HomePage() {
 
     return (
       <div>
+        <MenuBar />
         <h1>Multi-Item Carousel</h1>
         <MultiItemCarousel data={data} />
       </div>
