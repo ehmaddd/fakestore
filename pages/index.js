@@ -67,8 +67,10 @@ function HomePage() {
 
   return (
     <div>
-      <h1>UDEMY</h1>
-      <MenuBar />
+      <div className="head">
+          <a href="/"><p className="header">FakeStore</p></a>
+          <MenuBar />
+      </div>
       <div className="carousal-holder">
         <MultiItemCarousel data={data} />
       </div>

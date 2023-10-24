@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import MenuBar from '@/components/MenuBar';
+import './ProductDetail.css';
 
 function ProductDetail() {
   const router = useRouter();
@@ -16,12 +17,22 @@ function ProductDetail() {
   }, []);
 
   return (
-    <div>
-      <MenuBar />
-      <h1>Product Details</h1>
-      <p>Product ID: {data.id}</p>
-      <p>{data.title}</p>
-    </div>
+      <div className="out-box">
+        <div className="head">
+          <a href="/"><p className="header">FakeStore</p></a>
+          <MenuBar />
+        </div>
+        <div className="container">
+          <h1>{data.title}</h1>
+          <p className="price">${data.price}</p>
+        </div>
+        <div className="detail-div">
+          <img src={data.image} class="detail-image" />
+          <p className="price">${data.price}</p>
+          <p className="cart-btn">Add to Cart</p><p className="heart-btn">&#x2665;</p>
+          <p className="buy-btn">Buy Now</p>
+        </div>
+      </div>
   );
 
 }

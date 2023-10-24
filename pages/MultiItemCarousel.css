@@ -63,3 +63,15 @@
   width: 50%;
   height: 7rem;
 }
+
+.header {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.head {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}

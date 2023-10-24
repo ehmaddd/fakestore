@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  height: 15rem;
+  background-color: black;
+  margin: 0;
+  color: white;
+  width: 100vw;
+  padding: 3rem;
+}
+
+.out-box {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.detail-div {
+  position: absolute;
+  width: 20rem;
+  height: 25rem;
+  border: 1px solid lightblue;
+  right: 17rem;
+  top: 8rem;
+  background-color: white;
+  padding: 2rem;
+}
+
+.detail-image {
+  width: 15rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.cart-btn {
+  background-color:blueviolet;
+  color: white;
+  padding: 0.5rem;
+  width: 12rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.heart-btn {
+  display: inline-block;
+  border: 1px solid grey;
+  height: 3rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  width: 2.7rem;
+  padding: 0.2rem 0 0 0.7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-btn:hover,
+.heart-btn:hover {
+  box-shadow: 5px 5px 10px #333;
+}
+
+.buy-btn {
+  width: 100%;
+  border: 1px solid grey;
+  height: 3rem;
+  padding: 0.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.buy-btn:hover {
+  box-shadow: 5px 5px 10px #333;
+}
+
+.btn-primary {
+  display: inline-block;
+}
+
+.header {
+  cursor: pointer;
+}
+
+.price {
+  font-size: 1.7rem;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
