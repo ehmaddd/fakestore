@@ -26,6 +26,9 @@ function ProductDetail() {
           <h1>{data.title}</h1>
           <p className="price">${data.price}</p>
         </div>
+        <div>
+          <p className="description">{data.description}</p>
+        </div>
         <div className="detail-div">
           <img src={data.image} class="detail-image" />
           <p className="price">${data.price}</p>
