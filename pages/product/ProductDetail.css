@@ -19,7 +19,7 @@ body {
 }
 
 .detail-div {
-  position: absolute;
+  position: fixed;
   width: 20rem;
   height: 25rem;
   border: 1px solid lightblue;
@@ -101,4 +101,13 @@ body {
 .description {
   width: 50%;
   padding: 2rem;
+}
+
+.course-list {
+  width: 40rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 1rem;
+  margin-left: 3rem;
 }
