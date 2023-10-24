@@ -4,6 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import './MultiItemCarousel.css';
 import MenuBar from '../components/MenuBar';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 function MultiItemCarousel({ data }) {
   // Define your responsive settings
