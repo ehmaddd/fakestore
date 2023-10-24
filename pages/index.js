@@ -33,19 +33,21 @@ function MultiItemCarousel({ data }) {
   return (
     <Carousel responsive={responsive}>
       {data.map((element, index) => (
-        <div className="card hoverable-card carousal-card" key={index}>
-          <div className="card-body">
-            <img className="w-50 h-100" src={element.image} />
-            <h6 className="card-title">{element.title}</h6>
-            <p>Rating: {element.rating.rate}</p>
-            <p>Price: ${element.price}</p>
+        <Link href={`/product/${element.id}`} key={element.id}>
+          <div className="card hoverable-card carousal-card">
+            <div className="card-body">
+              <img src={element.image} />
+              <h6 className="card-title">{element.title}</h6>
+              <p>Rating: {element.rating.rate}</p>
+              <p>Price: ${element.price}</p>
+            </div>
+            <div className="alternate-content">
+              <h5>{element.title}</h5>
+              <p>{element.rating.rate}</p>
+              <p className="details">{element.description}</p>
+            </div>
           </div>
-          <div className="alternate-content">
-            <h5>{element.title}</h5>
-            <p>{element.rating.rate}</p>
-            <p className="details">{element.description}</p>
-          </div>
-        </div>
+        </Link>
       ))}
     </Carousel>
   );
@@ -66,7 +68,9 @@ function HomePage() {
     <div>
       <h1>UDEMY</h1>
       <MenuBar />
-      <MultiItemCarousel data={data} />
+      <div className="carousal-holder">
+        <MultiItemCarousel data={data} />
+      </div>
     </div>
   );
 }

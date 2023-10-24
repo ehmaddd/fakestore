@@ -11,16 +11,14 @@
   display: block;
 }
 
-.card {
-  width: 250px;
-  height: 350px;
-  margin: 5rem;
-  padding: 1rem;
+.carousal-card {
+  width: 250px; /* Set a fixed width for all cards */
+  height: 350px; /* Set a fixed height for all cards */
 }
 
 .card-img-top {
   max-width: 13rem;
-  height: 12rem;
+  height: 2rem;
 }
 
 .card-body>* {
@@ -47,15 +45,21 @@
   left: 0;
   opacity: 0;
   border: 1px solid lightgray;
+  font-size: 0.9rem;
 }
 
 .card.hoverable-card:hover .alternate-content {
   opacity: 1;
-  margin: 0.5rem;
-  border: 1px solid lightgray;
+  margin: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carousal-card {
-  width: 250px;
+.carousal-holder {
+  width: 90%;
+  margin: auto;
+}
+
+.card.hoverable-card img {
+  width: 50%;
+  height: 7rem;
 }
