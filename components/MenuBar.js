@@ -1,50 +1,26 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import React, { useEffect } from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle'; // Import Bootstrap's JavaScript
+import { React, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function MenuBar() {
-  // No need for the useEffect block for vanilla JavaScript since Bootstrap handles the functionality
 
+const MenuBar = () => {
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   return (
-    <div className="dropdown">
-      <button
-        className="btn btn-secondary dropdown-toggle"
-        type="button"
-        id="mainDropdown"
-        data-toggle="dropdown"
-      >
-        Main Category
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
       </button>
-      <ul className="dropdown-menu" aria-labelledby="mainDropdown">
-        <li className="dropdown-submenu">
-          <a
-            className="dropdown-item"
-            href="#"
-            data-toggle="dropdown" // Use data-toggle to activate the submenu
-          >
-            Sub Category 1
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">
+
           </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Sub-Sub Category 1.1</a></li>
-            <li><a className="dropdown-item" href="#">Sub-Sub Category 1.2</a></li>
-          </ul>
-        </li>
-        <li className="dropdown-submenu">
-          <a
-            className="dropdown-item"
-            href="#"
-            data-toggle="dropdown" // Use data-toggle to activate the submenu
-          >
-            Sub Category 2
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Sub-Sub Category 2.1</a></li>
-            <li><a className="dropdown-item" href="#">Sub-Sub Category 2.2</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      </li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
   );
-}
+};
 
 export default MenuBar;
