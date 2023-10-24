@@ -7,27 +7,27 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 function MultiItemCarousel({ data }) {
-  // Define your responsive settings
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5, // Number of items to display on super-large desktops
+      items: 5,
     },
     largeDesktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4, // Number of items to display on large desktops
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
-      items: 3, // Number of items to display on desktops
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
-      items: 2, // Number of items to display on tablets
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1, // Number of items to display on mobile devices
+      items: 1,
     },
   };
 
@@ -58,7 +58,6 @@ function HomePage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fetch your data here
     fetch('https://fakestoreapi.com/products')
       .then((response) => response.json())
       .then((apiData) => setData(apiData))

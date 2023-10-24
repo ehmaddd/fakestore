@@ -29,6 +29,9 @@ function ProductDetail() {
         <div>
           <p className="description">{data.description}</p>
         </div>
+        <div>
+          <img src="./pulic/nasdaq" />
+        </div>
         <div className="detail-div">
           <img src={data.image} class="detail-image" />
           <p className="price">${data.price}</p>

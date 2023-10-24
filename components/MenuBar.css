@@ -1,6 +1,6 @@
 .dropdown-menu {
     position: absolute;
-    left: -100%; /* Position the dropdown to the left */
+    left: -100%;
     top: 100%;
     display: none;
     background-color: #fff;
@@ -10,12 +10,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Show the dropdown on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Style for the dropdown items */
 .dropdown-item {
     padding: 10px;
     text-decoration: none;
@@ -23,12 +21,10 @@
     display: block;
 }
 
-/* Change the color on hover */
 .dropdown-item:hover {
     background-color: #f0f0f0;
 }
 
-/* Additional styles for your main tabs */
 .nav-link {
     text-decoration: none;
     color: #333;
@@ -41,7 +37,6 @@
     background-color: #f0f0f0;
 }
 
-/* Style the navbar */
 .navbar {
     background-color: #333;
     color: #fff;
