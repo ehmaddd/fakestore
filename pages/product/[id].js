@@ -69,27 +69,24 @@ function ProductDetail() {
           <p className="description">{data.description}</p>
         </div>
         <div>
-      {courses.map((course, index) => (
-        <div key={index} className="course-list">
-          <div onClick={() => toggleCourse(index)}>
-            <p>{course.title}</p>
-            {openCourse === index ? (
-              <h5>| ^</h5>
-            ) : (
-              <h5>| v</h5>
-            )}
-          </div>
-          {openCourse === index && (
-            <div className="pane">
-              <ul>
-                {course.lessons.map((lesson, lessonIndex) => (
-                  <li key={lessonIndex}>{lesson}</li>
-                ))}
-              </ul>
+        {courses.map((course, index) => (
+          <div class="accordion" id={`accordionExample-${index}`}>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button accordion-button-small" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseOne-${index}`} aria-expanded="true" aria-controls={`collapseOne-${index}`}>
+                  {course.title}
+                </button>
+              </h2>
+              {course.lessons.map((lesson, lessonIndex) => (
+                <div id={`collapseOne-${index}`} class={`accordion-collapse collapse show ${lessonIndex === 0 ? 'accordion-content-small' : ''}`} data-bs-parent={`#accordionExample-${index}`}>
+                  <div class="accordion-body">
+                    <strong>{lesson}</strong>
+                  </div>
+                </div>
+              ))}
             </div>
-          )}
-        </div>
-      ))}
+          </div>
+))}
     </div>
         <div className="detail-div">
           <img src={data.image} class="detail-image" />
