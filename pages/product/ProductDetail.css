@@ -113,13 +113,7 @@ body {
   margin-left: 3rem;
 }
 
-.accordion-button-small {
-  padding: 0.5rem 1rem; /* Adjust the padding as needed */
-  font-size: 14px; /* Adjust the font size as needed */
-}
-
-.accordion-content-small {
-  width: 200px;
-  padding: 0.5rem; /* Adjust the padding as needed */
-  font-size: 12px; /* Adjust the font size as needed */
+.accordion {
+  width: 50%;
+  margin-left: 1.5rem;
 }
