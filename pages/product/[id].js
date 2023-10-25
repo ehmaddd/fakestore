@@ -62,7 +62,7 @@ function ProductDetail() {
           <MenuBar />
         </div>
         <div className="container">
-          <h1>{data.title}</h1>
+          <h1 className="item-title">{data.title}</h1>
           <p className="price">${data.price}</p>
         </div>
         <div>
