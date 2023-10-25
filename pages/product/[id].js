@@ -70,24 +70,35 @@ function ProductDetail() {
         </div>
         <div>
         {courses.map((course, index) => (
-          <div class="accordion" id={`accordionExample-${index}`}>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button accordion-button-small" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseOne-${index}`} aria-expanded="true" aria-controls={`collapseOne-${index}`}>
+          <div className="accordion" id={`accordionExample-${index}`} key={index}>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button accordion-button-small"
+                  type="button"
+                  onClick={() => toggleCourse(index)} // Add an onClick handler to toggle the course
+                  aria-expanded={openCourse === index} // Check if the course is open
+                  aria-controls={`collapseOne-${index}`}
+                >
                   {course.title}
                 </button>
               </h2>
               {course.lessons.map((lesson, lessonIndex) => (
-                <div id={`collapseOne-${index}`} class={`accordion-collapse collapse show ${lessonIndex === 0 ? 'accordion-content-small' : ''}`} data-bs-parent={`#accordionExample-${index}`}>
-                  <div class="accordion-body">
+                <div
+                  id={`collapseOne-${index}`}
+                  className={`accordion-collapse collapse ${openCourse === index ? 'show' : ''} ${lessonIndex === 0 ? 'accordion-content-small' : ''}`}
+                  data-bs-parent={`#accordionExample-${index}`}
+                  key={lessonIndex}
+                >
+                  <div className="accordion-body">
                     <strong>{lesson}</strong>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-))}
-    </div>
+        ))}
+        </div>
         <div className="detail-div">
           <img src={data.image} class="detail-image" />
           <p className="price">${data.price}</p>
