@@ -99,11 +99,14 @@ function ProductDetail() {
           </div>
         ))}
         </div>
-        <div className="detail-div">
-          <img src={data.image} class="detail-image" />
-          <p className="price">${data.price}</p>
-          <p className="cart-btn">Add to Cart</p><p className="heart-btn">&#x2665;</p>
-          <p className="buy-btn">Buy Now</p>
+        <div class="card detail-div">
+          <img class="card-img-top card-img" src={data.image} alt="Card image cap" />
+          <div class="card-body">
+            <p className="price">${data.price}</p>
+            <p className="cart-btn">Add to Cart</p>
+            <p className="heart-btn">&#x2665;</p>
+            <p className="buy-btn">Buy Now</p>
+          </div>
         </div>
       </>
   );

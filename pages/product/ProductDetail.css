@@ -20,7 +20,7 @@ body {
 
 .detail-div {
   position: fixed;
-  width: 20rem;
+  width: 22rem;
   height: 25rem;
   border: 1px solid lightblue;
   right: 17rem;
@@ -127,4 +127,12 @@ body {
   height: 20rem;
   padding: 2rem 2rem;
   color: white;
+}
+
+.card-img {
+  height: 10rem;
+}
+
+.card detail-div {
+  padding: 2rem;
 }
