@@ -27,6 +27,7 @@ body {
   top: 8rem;
   background-color: white;
   padding: 2rem;
+  z-index: 100;
 }
 
 .detail-image {
