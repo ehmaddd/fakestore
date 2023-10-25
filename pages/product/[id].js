@@ -56,12 +56,12 @@ function ProductDetail() {
   }, []);
 
   return (
-      <div className="out-box">
+      <>
         <div className="head">
           <a href="/"><p className="header">FakeStore</p></a>
           <MenuBar />
         </div>
-        <div className="container">
+        <div className="jumbotron">
           <h1 className="item-title">{data.title}</h1>
           <p className="price">${data.price}</p>
         </div>
@@ -105,7 +105,7 @@ function ProductDetail() {
           <p className="cart-btn">Add to Cart</p><p className="heart-btn">&#x2665;</p>
           <p className="buy-btn">Buy Now</p>
         </div>
-      </div>
+      </>
   );
 
 }

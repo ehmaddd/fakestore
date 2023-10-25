@@ -119,5 +119,12 @@ body {
 }
 
 .item-title {
-  width: 70%;
+  width: 40rem;
+}
+
+.jumbotron {
+  background-color: black;
+  height: 15rem;
+  padding: 2rem 2rem;
+  color: white;
 }
